@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Assist Me</string>
+    <string name="enter_quick_task_here">Enter Quick Task Here</string>
+    <string name="notifications"><u>Notifications</u></string>
+
+    <string-array name="repeat_array">
+        <item>No Repeat</item>
+        <item>Daily</item>
+        <item>Weekly</item>
+    </string-array>
+</resources>

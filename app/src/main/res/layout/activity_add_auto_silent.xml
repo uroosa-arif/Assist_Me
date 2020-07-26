@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screens.AddAutoSilentActivity">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Due date"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/date_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="Date not set"
+            android:inputType="textPersonName"
+            android:onClick="setDate"
+            app:layout_constraintEnd_toStartOf="@+id/date"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <ImageButton
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#00FFFFFF"
+            android:onClick="setDate"
+            android:src="@drawable/ic_date_range_black_24dp"
+            android:tint="#2E9DFC"
+            app:layout_constraintBottom_toBottomOf="@+id/date_et"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/date_et" />
+
+        <EditText
+            android:id="@+id/time_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="Time not set (all day)"
+            android:inputType="textPersonName"
+            android:onClick="setTime"
+            app:layout_constraintEnd_toStartOf="@+id/time_btn"
+            app:layout_constraintStart_toStartOf="@+id/date_et"
+            app:layout_constraintTop_toBottomOf="@+id/date_et" />
+
+        <ImageButton
+            android:id="@+id/time_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#00FFFFFF"
+            android:onClick="setTime"
+            android:src="@drawable/ic_access_time_black_24dp"
+            android:tint="#2E9DFC"
+            app:layout_constraintBottom_toBottomOf="@+id/time_et"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/time_et" />
+        <TextView
+            android:id="@+id/repeat_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Repeat"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintStart_toStartOf="@+id/time_et"
+            app:layout_constraintTop_toBottomOf="@+id/time_et" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:gravity="left"
+            android:entries="@array/repeat_array"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/repeat_tv"
+            app:layout_constraintTop_toBottomOf="@+id/repeat_tv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/reminder_cv"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="56dp"
+            android:layout_marginTop="40dp"
+            app:cardBackgroundColor="#FC6C85"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/reminder_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="115dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/clock_3" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Reminder"
+                    android:textColor="#FFFFFF"
+
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/message_cv"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="56dp"
+            android:layout_marginTop="40dp"
+            app:cardBackgroundColor="#C48793"
+            app:layout_constraintStart_toEndOf="@id/reminder_cv"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/auto_msg_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="115dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/msg_2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Message"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/auto_silent_cv"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="56dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="#FCB56D"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reminder_cv">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/auto_silent_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="115dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/silent_2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Silent"
+                    android:textColor="#FFFFFF"
+
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/about_cv"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="56dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="#5EE4A1"
+            app:layout_constraintStart_toEndOf="@id/auto_silent_cv"
+            app:layout_constraintTop_toBottomOf="@id/message_cv">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/about_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="115dp"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/lock_3" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Lock"
+                    android:textColor="#FDFBFB"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
